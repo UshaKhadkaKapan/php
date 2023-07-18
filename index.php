@@ -1,3 +1,24 @@
+<html>
+
+<body>
+
+    <form action="index.php" method="post">
+        Number1: <input type="text" name="number1"><br>
+        Number2: <input type="text" name="number2"><br>
+        Operation: <select type="text" name="operation">
+            <option value="+">Add</option>
+            <option value="-">Sub</option>
+            <option value="*">Multiply</option>
+            <option value="/">Divide</option>
+        </select><br>
+
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>
+
 <?php
 
 // include 'User.php';
@@ -108,3 +129,59 @@
 // echo $_SERVER['HTTP_USER_AGENT'];
 // echo "<br>";
 // echo $_SERVER['SCRIPT_NAME'];
+
+// form
+
+// print_r($_POST['name']);
+
+// function add($a, $b)
+// {
+//     $sum = $a + $b;
+//     return $sum;
+// }
+
+// $x = 1;
+// $y = 4;
+
+// $result = add($x, $y);
+// echo $result;
+// $x=$_POST[number1];
+//print_r($_POST);
+$x = $_POST['number1'];
+$y = $_POST['number2'];
+$action = $_POST['operation'];
+
+if (!is_numeric($x)) {
+    echo 'invalid input number1';
+    exit;
+}
+
+if (!is_numeric($y)) {
+    echo 'invalid input number2';
+    exit;
+}
+
+function calculate($a, $b, $action)
+{
+    switch ($action) {
+        case '+':
+            $output = $a + $b;
+            break;
+        case '-':
+            $output = $a - $b;
+            break;
+        case '*':
+            $output = $a * $b;
+            break;
+        case '/':
+            $output = $a / $b;
+            break;
+        default:
+            $output = "Invalid Operator";
+    }
+    return $output;
+}
+
+
+$result = calculate($x, $y, $action);
+echo $result;
