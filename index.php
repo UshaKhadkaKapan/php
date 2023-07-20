@@ -147,41 +147,41 @@
 // echo $result;
 // $x=$_POST[number1];
 //print_r($_POST);
-$x = $_POST['number1'];
-$y = $_POST['number2'];
-$action = $_POST['operation'];
+// $x = $_POST['number1'];
+// $y = $_POST['number2'];
+// $action = $_POST['operation'];
 
-if (!is_numeric($x)) {
-    echo 'invalid input number1';
-    exit;
-}
+// if (!is_numeric($x)) {
+//     echo 'invalid input number1';
+//     exit;
+// }
 
-if (!is_numeric($y)) {
-    echo 'invalid input number2';
-    exit;
-}
+// if (!is_numeric($y)) {
+//     echo 'invalid input number2';
+//     exit;
+// }
 
-function calculate($a, $b, $action)
-{
-    switch ($action) {
-        case '+':
-            $output = $a + $b;
-            break;
-        case '-':
-            $output = $a - $b;
-            break;
-        case '*':
-            $output = $a * $b;
-            break;
-        case '/':
-            $output = $a / $b;
-            break;
-        default:
-            $output = "Invalid Operator";
-    }
-    return $output;
-}
+// function calculate($a, $b, $action)
+// {
+//     switch ($action) {
+//         case '+':
+//             $output = $a + $b;
+//             break;
+//         case '-':
+//             $output = $a - $b;
+//             break;
+//         case '*':
+//             $output = $a * $b;
+//             break;
+//         case '/':
+//             $output = $a / $b;
+//             break;
+//         default:
+//             $output = "Invalid Operator";
+//     }
+//     return $output;
+// }
 
 
-$result = calculate($x, $y, $action);
-echo $result;
+// $result = calculate($x, $y, $action);
+// echo $result;
