@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 
 <body>
 
@@ -10,14 +10,14 @@
             <option value="-">Sub</option>
             <option value="*">Multiply</option>
             <option value="/">Divide</option>
-        </select><br>
+        </select><br> -->
 
-        <input type="submit">
+<!-- <input type="submit">
     </form>
 
 </body>
 
-</html>
+</html> -->
 
 <?php
 
