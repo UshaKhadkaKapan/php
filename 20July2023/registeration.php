@@ -17,6 +17,9 @@
         </select><br />
         Email: <input type="email" name="email" /><br />
         Password: <input type="text" name="password" /><br />
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <br />
         <input type="submit" name="submit" />
     </form>
 </body>
@@ -27,12 +30,14 @@
 
 include 'dbconfig.php';
 
+
 if (isset($_POST['submit'])) {
 
     $first = $_POST['fname']; // firstname from form data received using POST request
     $last = $_POST['lname']; // lastname from the same source as above
     $gender = $_POST['gender']; //
     $occupation = $_POST['occupation'];
+    $fileToUpload = $_POST['fileToUpload'];
     $email = $_POST['email'];   #Email Address of user entered in registration page through HTML
     $password = $_POST['password'];
 
@@ -40,6 +45,7 @@ if (isset($_POST['submit'])) {
     // print_r($_POST['gender']);
 
     // $first = '123abc';
+    include 'upload.php';
 
     if (strlen($first) == 0 || !is_string($first)) {
         echo "Invalid First Name";
@@ -74,8 +80,8 @@ if (isset($_POST['submit'])) {
 
     print_r($_POST);
 
-    $sql = "INSERT INTO users (first, last,gender,occupation, email,password)
-VALUES ('$first','$last','$gender','$occupation','$email','$password')";
+    $sql = "INSERT INTO users (first, last,gender,occupation, email,password,fileToUpload)
+VALUES ('$first','$last','$gender','$occupation','$email','$password','$fileToUpload')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";

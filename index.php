@@ -1,23 +1,3 @@
-<!-- <html>
-
-<body>
-
-    <form action="index.php" method="post">
-        Number1: <input type="text" name="number1"><br>
-        Number2: <input type="text" name="number2"><br>
-        Operation: <select type="text" name="operation">
-            <option value="+">Add</option>
-            <option value="-">Sub</option>
-            <option value="*">Multiply</option>
-            <option value="/">Divide</option>
-        </select><br> -->
-
-<!-- <input type="submit">
-    </form>
-
-</body>
-
-</html> -->
 
 <?php
 
