@@ -1,3 +1,8 @@
+<?php
+include 'index.php';
+
+?>
+
 <html>
 
 <body>
@@ -13,8 +18,6 @@
 <?php
 
 include 'dbconfig.php';
-// print_r($_POST);
-
 if (isset($_POST['submit'])) {
 
   $email = $_POST['email'];
@@ -40,11 +43,14 @@ if (isset($_POST['submit'])) {
   if (mysqli_num_rows($result) > 0) {
     // output data of each row
     $row = mysqli_fetch_assoc($result);
+    $id = $row['id'];
     $dbEmail = $row['email'];
     $dbPassword = $row['password'];
 
     if ($email == $dbEmail && $password == $dbPassword) {
-      echo "Login successful!";
+      session_start();
+      $_SESSION['id'] = $id;
+      echo "Login successful!" && header("Location: http://localhost/practice/20July2023/profile.php");
     } else {
       echo 'login fail';
     }
