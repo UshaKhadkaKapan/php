@@ -1,33 +1,26 @@
 <?php
-
-class man
+class fruit
 {
     // properties
-    public $fname;
-    public $lname;
-    public $age;
+    public $name;
+    public $color;
 
     // methods
-
-    function set_fname($fname)
+    function __construct($n, $c)
     {
-        $this->fname = $fname;
+        $this->name = $n;
+        $this->color = $c;
     }
-    function get_fname()
+    function get_name()
     {
-        return $this->fname;
+        return $this->name;
     }
-    function set_lname($lname)
+    function get_color()
     {
-        $this->lname = $lname;
-    }
-    function get_lname()
-    {
-        return $this->lname;
+        return $this->color;
     }
 }
 
-$man1 = new man();
-$man1->set_fname("Usha");
-$man1->set_lname("Khadka");
-echo "First Name: " . $man1->get_fname() . "<br>";  # First name
+$apple = new fruit("Apple", "red");
+echo "The name of the apple is " . $apple->get_name() . "<br>";
+echo "And its color is " .  $apple->get_color() . "<br><hr>";
