@@ -1,26 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <?php
+    include 'youTube.php';
+    $dog = new animal();
+    echo $dog->info();
+    ?>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
 <?php
-class fruit
-{
-    // properties
-    public $name;
-    public $color;
 
-    // methods
-    function __construct($n, $c)
-    {
-        $this->name = $n;
-        $this->color = $c;
-    }
-    function get_name()
-    {
-        return $this->name;
-    }
-    function get_color()
-    {
-        return $this->color;
-    }
-}
 
-$apple = new fruit("Apple", "red");
-echo "The name of the apple is " . $apple->get_name() . "<br>";
-echo "And its color is " .  $apple->get_color() . "<br><hr>";
+
+// class user
+// {
+//     public $fname;
+//     public $lname;
+//     public $email;
+//     public $password;
+//     public $address;
+//     public $gender;
+//     public $occupation;
+
+//     public function construct__($fname, $lname, $email, $password, $address, $gender, $occupation)
+//     {
+//         $this->fname = $fname;
+//         $this->lname = $lname;
+//         $this->email = $email;
+//         $this->password = $password; //hashing password using sha
+//         $this->address = $address;
+//         $this->gender = $gender;
+//         $this->occupation = $occupation;
+//     }
+//     function get_fname()
+//     {
+//         return $this->fname;
+//     }
+//     function get_lname()
+//     {
+//         return $this->lname;
+//     }
+//     function get_email()
+//     {
+//         return $this->email;
+//     }
+//     function get_password()
+//     {
+//         return $this->password;
+//     }
+//     function get_address()
+//     {
+//         return $this->address;
+//     }
+//     function get_gender()
+//     {
+//         return $this->gender;
+//     }
+//     function get_occupation()
+//     {
+//         return $this->occupation;
+//     }
+// }
