@@ -8,8 +8,13 @@
 <body>
     <?php
     include 'youTube.php';
-    $dog = new animal();
-    echo $dog->info();
+    // $dog = new animal();
+    // echo $dog->info();
+
+    $person1 = new person("Usha", "Blue", "female");
+    echo "My name is {$person1->name}";
+    $person1->setName("Sundaer");
+    echo $person1->name;
     ?>
 
 
