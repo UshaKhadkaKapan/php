@@ -1,3 +1,7 @@
+<?php
+
+declare(strict_types=1);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -7,14 +11,22 @@
 
 <body>
     <?php
-    include 'youTube.php';
+
+
+    include 'youTube.class.php';
     // $dog = new animal();
     // echo $dog->info();
 
     $person1 = new person("Usha", "Blue", "female");
-    echo "My name is {$person1->name}";
-    $person1->setName("Sundaer");
-    echo $person1->name;
+    try {
+        echo "My name is {$person1->name}";
+        $person1->setName("Sundaer");
+        echo $person1->eyecolor;
+        echo $person1->name;
+    } catch (TypeError $error) {
+        echo "Error!: " . $error;
+    }
+
     ?>
 
 
