@@ -15,7 +15,7 @@ include './classes/text.class.php';
 
     <?php
     $newObj = new Test();
-    $newObj->getUser();
+    $newObj->getUserStmt("Usha", "Khadka");
 
 
     ?>
