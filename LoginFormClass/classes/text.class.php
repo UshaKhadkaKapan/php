@@ -26,4 +26,11 @@ class Test extends Dbh
             echo $name['first_name'];
         }
     }
+
+    public function setUserStmt($firstname, $lastname)
+    {
+        $sql = "INSERT INTO actor(first_name,last_name) VALUES(?,?)";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$firstname, $lastname]);
+    }
 }
