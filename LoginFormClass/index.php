@@ -1,5 +1,5 @@
 <?php
-
+include './classes/text.class.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,13 @@
 <body>
 
     <h1>PDO</h1>
+
+    <?php
+    $newObj = new Test();
+    $newObj->getUser();
+
+
+    ?>
 
 
 </body>
