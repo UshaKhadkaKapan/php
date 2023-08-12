@@ -1,5 +1,6 @@
 <?php
-include './classes/text.class.php';
+include './classes/user-view.class.php';
+include './classes/user-controller.class.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +15,13 @@ include './classes/text.class.php';
     <h1>PDO</h1>
 
     <?php
-    $newObj = new Test();
-    // $newObj->getUserStmt("Usha", "Khadka");
-    $newObj->setUserStmt("Sundar", "Ban");
+    $newObj = new UserView();
+    $newObj->showUsers("Usha");
+
+    $newObject = new UserController();
+    $newObject->createUser("Bipin", "Khadka")
+
+
 
 
     ?>
